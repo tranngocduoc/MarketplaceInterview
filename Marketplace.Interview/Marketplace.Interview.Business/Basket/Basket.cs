@@ -9,6 +9,7 @@ namespace Marketplace.Interview.Business.Basket
     {
         public List<LineItem> LineItems { get; set; }
         public decimal Shipping { get; set; }
+        public decimal Discount { get; set; }
     }
 
     public class LineItem
@@ -21,7 +22,6 @@ namespace Marketplace.Interview.Business.Basket
         public int Id { get; set; }
 
         public decimal ShippingAmount { get; set; }
-
         public string ShippingDescription { get; set; }
     }
 }

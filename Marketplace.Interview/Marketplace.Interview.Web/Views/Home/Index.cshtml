@@ -32,6 +32,22 @@
             </td></tr>
     }
     </tbody>
+    @if (Model.Basket.LineItems.Count() > 0) { 
+    <tfoot>
+        <tr>
+            <td colspan="4" align="right">Shipping</td>
+            <td colspan="2">@Model.Basket.Shipping</td>
+        </tr>
+        <tr>
+            <td colspan="4" align="right">Discount</td>
+            <td colspan="2">@Model.Basket.Discount</td>
+        </tr>
+        <tr>
+            <td colspan="4" align="right">Total Shipping</td>
+            <td colspan="2">@(Model.Basket.Shipping - Model.Basket.Discount)</td>
+        </tr>
+    </tfoot>
+    }
     </table>
     </fieldset>
 

@@ -13,6 +13,7 @@ namespace Marketplace.Interview.Web.Controllers
         private readonly IAddToBasketCommand _addToBasket;
         private readonly IGetShippingOptionsQuery _getShippingOptions;
         private readonly IRemoveFromBasketCommand _removeFromBasketCommand;
+        //private readonly IShippingCalculator _iShippingCalculator;
 
         public HomeController(IGetBasketQuery basketLoader, 
             IAddToBasketCommand addToBasket, 
@@ -31,7 +32,8 @@ namespace Marketplace.Interview.Web.Controllers
             var shippingOptions = _getShippingOptions.Invoke(new GetShippingOptionsRequest()).ShippingOptions;
 
             var viewModel = new InterviewViewModel {Basket = basket, ShippingOptions = shippingOptions};
-
+            ///var shipping = _iShippingCalculator.CalculateShipping(basket);
+            //System.Console.WriteLine(shipping.ToString());
             return View(viewModel);
         }
 

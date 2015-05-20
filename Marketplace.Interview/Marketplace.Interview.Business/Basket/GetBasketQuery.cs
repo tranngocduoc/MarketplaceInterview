@@ -16,7 +16,7 @@ namespace Marketplace.Interview.Business.Basket
         {
             var basket = GetBasket();
             basket.Shipping = _shippingCalculator.CalculateShipping(basket);
-
+            basket.Discount = _shippingCalculator.CalculateDiscount(basket);
             return basket;
         }
     }

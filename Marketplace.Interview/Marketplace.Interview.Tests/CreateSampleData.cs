@@ -30,6 +30,17 @@ namespace Marketplace.Interview.Tests
                         {
                             new RegionShippingCost{DestinationRegion = RegionShippingCost.Regions.UK, Amount = .5m},
                             new RegionShippingCost{DestinationRegion = RegionShippingCost.Regions.Europe, Amount = 1m},
+                            new RegionShippingCost{DestinationRegion = RegionShippingCost.Regions.RestOfTheWorld, Amount = .5m},
+                        }
+                    }
+                },
+                {
+                    "FedEx", new FexExShipping
+                    {
+                        PerRegionCosts = new List<RegionShippingCost>
+                        {
+                            new RegionShippingCost{DestinationRegion = RegionShippingCost.Regions.UK, Amount = .5m},
+                            new RegionShippingCost{DestinationRegion = RegionShippingCost.Regions.Europe, Amount = 1m},
                             new RegionShippingCost{DestinationRegion = RegionShippingCost.Regions.RestOfTheWorld, Amount = 2m},
                         }
                     }
